@@ -4,14 +4,15 @@ Postgresql-14
 How to take backup PosgreSQL using pg_dump with crontab in Linux?
 Find the pg_hba.conf file
 
+```
 sudo su - postgres
 psql
 SHOW hba_file;
 
 Change the method to 'trust' and save the file
-
+```
 sudo vim /etc/postgresql/11/main/pg_hba.conf
-
+```
 local   all             postgres                                trust
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 # "local" is for Unix domain socket connections only
@@ -59,3 +60,4 @@ crontab -l (show job)
 crontab -r (delete)
 crontab -e
 -------
+```
